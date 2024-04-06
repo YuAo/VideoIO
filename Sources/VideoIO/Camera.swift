@@ -400,7 +400,16 @@ public class Camera {
     
     internal var photoCaptureDelegateHandlers: [AnyObject] = []
     
+    private var _audioQueueCaptureSession: AnyObject?
+    
     @available(macOS, unavailable)
-    internal var audioQueueCaptureSession: AudioQueueCaptureSession?
+    internal var audioQueueCaptureSession: AudioQueueCaptureSession? {
+        get {
+            _audioQueueCaptureSession as? AudioQueueCaptureSession
+        }
+        set {
+            _audioQueueCaptureSession = newValue
+        }
+    }
 }
 

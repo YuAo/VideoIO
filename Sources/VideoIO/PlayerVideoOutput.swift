@@ -8,7 +8,7 @@
 import Foundation
 import AVFoundation
 
-@available(macOS, unavailable)
+@available(macOS 14.0, *)@available(macOS, unavailable)
 public class PlayerVideoOutput: NSObject {
     
     public struct Configuration {
